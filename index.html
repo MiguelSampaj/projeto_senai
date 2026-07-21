@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Site</title>
+    <title>Online Shopping</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <header>
@@ -16,32 +17,42 @@
         </div>
         <ul class="main-nav">
             <li><a href="/">HOME</a>   
-            <li><a href="/">ABOUT US</a>
+            <li><a href="/">SOBRE</a>
         </ul>
-        <search>
-
-        </search>
+    <!-----------SEARCH-BAR----------->
+        <div id="search">
+            <search>
+                <label for="searchInput">
+                    <img src="imagens/lupa.png" alt="lupa">
+                </label>
+                <input type="text" id="searchInput" placeholder="Pesquisar">
+            </search>
+            <div class="card-container">
+            </div>
+        </div>
+    <!---------SEARCH-BAR-END---------->
+    <a id="login" href="login.html">LOGIN</a>
     </header>
     <!-----------------MENU----------------->
-    <ul class="nav-list">
-        <h2>Categorias</h2>
-            <li><a href="/">Notebooks</a>   
+        <ul class="nav-list">
+            <h2>Categorias</h2>
+            <li><a href="/">Notebooks</a>
             <li><a href="/">Smartphones</a>
             <li><a href="/">Computadores</a>
             <li><a href="/">Tablets</a>
             <li><a href="/">Relógios</a>
-    </ul>
+        </ul>
     <!---------------MENU-END----------------->
     <main>
         <div class="banner">
             <div>
-                <img src="imagens/shop-logo.png" alt="shop-logo" class="shop-logo">
+                <img class="shop-logo" src="imagens/shop-logo.png" alt="shop-logo">
                 <h1>Seu PC dos sonhos aqui</h1>
                 <h2>Garanta já o seu!</h2>
             </div>
-            <img src="imagens/banner-pc.png" alt="banner-pc">
+            <img class="banner-pc" src="imagens/banner-pc.png" alt="banner-pc" ">
         </div>
-    </main>
     <script src="menu-navbar.js"></script>
+    </main>
 </body>
 </html>
