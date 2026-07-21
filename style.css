@@ -142,14 +142,20 @@ ul {
     left: 40px;
 }
     @media (max-width: 400px) {
+        .banner {
+            height: 15vh;
+        }
         .banner img {
             height: 75px;
         }
         .shop-logo {
-            height: 25px;
+            height: 20px;
         }
         .banner h1 {
-            font-size: 1em;
+            font-size: 0.7em;
+        }
+        .banner h2 {
+            font-size: 0.5em;
         }
     }
     @media (max-width: 850px) {
