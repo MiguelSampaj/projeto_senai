@@ -264,19 +264,21 @@ search img {
         }
     }
 /*-------------------BANNER-END-----------------------*/
-.produtos {
+main {
     background-image: linear-gradient(to bottom, #c9cdd6, #b2b0bd);
     box-shadow: 0 1px 4px var(--shadow);
     border-radius: 2.5vh;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: -5vh;
+}
+.produtos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-around;
     align-items: baseline;
-    width: 90%;
     padding: 2.5vw;
-    margin: auto;
-    position: relative;
-    top: -5vh;
     gap: 5px;
 }
 .produto {
@@ -304,13 +306,14 @@ search img {
 }
 .actions {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 1vw;
 }
 .actions p {
     font: 1em var(--font2);
-    padding: 0.4em;
+    padding: bold 0.4em;
     color: #2271b2;
+    margin-right: 1vw;
 }
 .produto button {
     background-image: linear-gradient(to bottom, #27b0d4, #2271b2);
@@ -319,21 +322,79 @@ search img {
     padding: 5px 7px;
     border-radius: 20px;
     font: bold 0.9em var(--font2);
-    box-shadow: 0 0 4px var(--shadow);
     cursor: pointer;
 }
 
-    @media (max-width: 700px) {
+    @media (max-width: 750px) {
         main {
-            top: -1vh;
+            top: -5vh;
             border-radius: 2vw;
         }
         .actions {
             flex-direction: column;
             margin: 0 0 1em 0;
         }
+        .actions p {
+            margin-right: 0px;
+        }
         .produtos { 
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+        }
+    }
+.ad {
+    background-image: linear-gradient(to bottom, #5688b1, #377094, #3b466d);
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+}
+.ad img {
+    width: 40%;
+    height: 30vh;
+    object-fit: cover;
+    position: relative;
+    left: 1vw;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.300));
+}
+.sale {
+    color: #d0fbff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: end;
+    text-align: right;
+    padding: 2vw;
+}
+.sale h2 {
+    font: 0.7em;
+    color: var(--color1);
+}
+#buy {
+    background-color: var(--color2);
+    border-radius: 20px;
+    border: solid 2px rgb(11, 11, 12);
+}
+    @media (max-width:750px) {
+        .ad {
+            height: 20vh;
+        }
+        .sale h1 {
+            font-size: 1.1em;
+        }
+        .sale h2 {
+            font-size: 0.9em;
+        }
+        .ad img {
+            object-fit: contain;
+            height: 20vh;
+        }
+    }
+    @media (min-width: 750px) {
+        .ad {
+            height: 35vh;
+        }
+        .ad img {
+            height: 35vh;
         }
     }
