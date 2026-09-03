@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="stylelogin.css">
+    <script src="main.js" defer></script>
+</head>
+<body style="background: #c7c7c7;">
+    <header>
+        <a href="/" class="logo"></a>
+        <div class="logo-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="main-nav">
+            <li><a href="/" class="a">HOME</a>   
+            <li><a href="/" class="a">SOBRE</a>
+        </ul>
+    <!-----------SEARCH-BAR----------->
+        <div id="search">
+            <search>
+                <label for="searchInput">
+                    <img src="imagens/lupa.png" alt="lupa">
+                </label>
+                <input type="text" id="searchInput" placeholder="Pesquisar">
+            </search>
+            <div class="card-container">
+            </div>
+        </div>
+    <!---------SEARCHBAR-END/MENU------------->
+    <a id="login" href="login.html">LOGIN</a>
+    </header>
+    <!-----------------MENU----------------->
+    <ul class="nav-list">
+            <h2>Categorias</h2>
+            <li><a href="/" class="a">Notebooks</a>
+            <li><a href="/" class="a">Smartphones</a>
+            <li><a href="/" class="a">Computadores</a>
+            <li><a href="/" class="a">Tablets</a>
+            <li><a href="/" class="a">Relógios</a>
+    </ul>
+    <script src="menu-navbar.js"></script>
+    <main class="container">
+        <form>
+            <h1>Login</h1>
+            <div class="input-box">
+                <input placeholder="Usuário" type="email">
+            </div>
+            <div class="input-box">
+                <input placeholder="Senha" type="password">
+            </div>
+        <form>
+    </main>
+</body>
+</html>
