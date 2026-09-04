@@ -48,3 +48,46 @@ searchInput.addEventListener("keyup", (e) => {
 window.addEventListener("load", () => {
     cardContainer.innerHTML = "";
 });
+
+
+const productList = [
+    {
+        name: "sla1",
+        price: 1244,
+        image: "imagens/product_images/notebook.png"
+    },
+
+    {
+        name: "sla2",
+        price: 1244,
+        image: "imagens/product_images/notebook.png"
+    },
+
+    {
+        name: "sla3",
+        price: 99399,
+        image: "imagens/product_images/notebook.png"
+    }
+];
+
+
+let productArea = document.getElementById("product")
+
+productList.forEach(product => {
+
+    let card = document.createElement("div");
+
+    card.className = "currentProduct";
+
+    card.innerHTML = `
+            <img src=${product.image} alt="notebook">
+            <h3>${product.name}</h3>
+            <div class="actions">
+            <p>R$${product.price}</p>
+            <a href="login.html">
+                <button>COMPRAR</button>
+            </a>
+            </div>
+    `;
+    productArea.appendChild(card);
+})
