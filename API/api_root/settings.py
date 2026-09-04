@@ -76,13 +76,13 @@ WSGI_APPLICATION = 'api_root.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-# Esta Configuração funciona perfeitamente em um servidor MySQL local com um banco chamado 'store' e sem senha para root, caso alguma dessas informações sejam diferentes no banco de dados usado, atualize essas linhas logo abaixo
+# Esta Configuração funciona perfeitamente em um servidor MySQL local com um banco chamado 'store' e com usuario e senha definidos por setup.sql, caso alguma dessas informações sejam diferentes no banco de dados usado, atualize essas linhas logo abaixo
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'store',
-        'USER': 'root',
-        'PASSWORD': '',
+        'USER': 'api',
+        'PASSWORD': 'Ab8*@$b0H8G!1kG#7bF',
         'HOST': 'localhost',
         'PORT': '3306',
     }
