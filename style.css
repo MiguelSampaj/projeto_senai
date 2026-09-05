@@ -268,11 +268,6 @@ search img {
             left: 2vh;
         }
     }
-    @media (min-width: 700px) {
-        .banner h1 {
-            font-size: 2.5em;
-        }
-    }
 /*-------------------BANNER-END-----------------------*/
 main {
     background-image: linear-gradient(to bottom, #c9cdd6, #b2b0bd);
@@ -373,28 +368,6 @@ form {
     outline: none;
     width: 100%;
 }
-    @media (max-width: 700px) {
-        main {
-            top: -1vh;
-            border-radius: 2vw;
-        }
-        .actions {
-            flex-direction: column;
-            margin: 0 0 1em 0;
-        }
-        .actions p {
-            margin-right: 0px;
-        }
-        #product {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .input-box, main.container{
-            width: 60%;
-            height: 100%;
-            margin: 10px auto;
-        }
-    }
 .ad {
     background-image: linear-gradient(to bottom, #5688b1, #377094, #3b466d);
     width: 100%;
@@ -429,7 +402,28 @@ form {
     border: solid 2px rgb(18, 18, 20);
     padding: 5px;
 }
-    @media (max-width:750px) {
+h3, h3>button {
+    background: transparent;
+    text-align: center;
+    font-family: var(--font2);
+    font-size: 1.1em;
+    color: var(--color6);
+    padding: 10px;
+    outline: none;
+    text-decoration: underline;
+}
+footer {
+    background-color: #2f4f9a;
+    border-radius: 0 0 2.5vh 2.5vh;
+}
+footer>h3{
+    color: var(--color1);
+    font-family: var(--font1);
+    font-size: 1em;
+    text-decoration: none;
+}
+/*media aplica propriedades a tamanhos de tela especificos*/
+    @media (max-width:700px) {
         .ad {
             height: 20vh;
         }
@@ -443,12 +437,47 @@ form {
             object-fit: contain;
             height: 20vh;
         }
+        main {
+            top: -1vh;
+            border-radius: 2vw;
+        }
+        .actions {
+            flex-direction: column;
+            margin: 0 0 1em 0;
+        }
+        .actions p {
+            margin-right: 0px;
+        }
+        #product {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .input-box, main.container{
+            width: 60%;
+            height: 100%;
+            margin: 10px auto;
+        }
+        footer, footer>h3 {
+            border-radius: 0 0 1.5vh 1.5vh;
+            font-size: 0.8em;
+        }
+        h3>button {
+            font-size: 1em;
+        }
     }
-    @media (min-width: 750px) {
+    @media (min-width: 700px) {
         .ad {
             height: 35vh;
         }
         .ad img {
             height: 35vh;
+        }
+        .banner h1 {
+            font-size: 2.5em;
+        }
+    }
+    @media (min-width: 1000px) {
+        .ad img {
+            max-width: 30%;
         }
     }
