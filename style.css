@@ -32,6 +32,7 @@ a {
     /* padding: 10px; */
     /* margin: 20px; */
 }
+/* links do menu */
 a.a {
     padding: 10px;
     margin: 20px;
@@ -99,12 +100,7 @@ ul > h2 {
             transform: translateX(0);
         }
     }
-    @media (min-width: 550px) {
-        .logo-menu {
-            position: absolute;
-        }
-    }
-/*--------------------MENU-END---------------------*/
+/*-----------------MENU-END/HEADER---------------------*/
 header {
     display: flex;
     justify-content: space-around;
@@ -124,68 +120,82 @@ ul {
     margin: 0px;
     white-space: nowrap;
 }
-search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row-reverse;
-    background-color: var(--color1);
-    border-radius: 20px;
-    width: 25vw;
-    height: 4vh;
-}
-search img {
-    width: 2vh;
-    padding: 1vh 1vh 0vh 0vh;
-}
-#searchInput {
-    font-family: var(--font2);
-    background: none;
-    width: 90%;
-    box-sizing: border-box;
-    padding-left: 1vh;
-    margin: 1.5px;
-    outline: none; 
-    text-decoration: none;
-}
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-    background-color: var(--color1);
-    border-radius: 1vh;
-    box-shadow: 0 2px 2px var(--shadow);
-    position: absolute;
-    top: 6.2vh;
-    z-index: 1;
-}
-.card {
-    width: 23vw;
-    padding: 1vw;
-    color: var(--color2);
-    z-index: 1;
-    font-size: 0.7em;
-    margin-bottom: 0.5vh;
-}
-#search {
+    /* ----searchbar---- */
+    search {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
-}
-
-    @media (max-width: 480px) {
-        ul a {
-            font-size: 80%;
-            margin: 0px;
-        }
-        #searchInput {
-            font-size: x-small;
-        }
-        .card {
-            width: 28vw;
-        }
+        flex-direction: row-reverse;
+        background-color: var(--color1);
+        border-radius: 20px;
+        width: 25vw;
+        height: 4vh;
     }
+    search img {
+        width: 2vh;
+        padding: 1vh 1vh 0vh 0vh;
+    }
+    #searchInput {
+        font-family: var(--font2);
+        background: none;
+        width: 90%;
+        box-sizing: border-box;
+        padding-left: 1vh;
+        margin: 1.5px;
+        outline: none; 
+        text-decoration: none;
+    }
+    .card-container {
+        display: flex;
+        /* flex-wrap: wrap; */
+        justify-content: flex-start;
+        flex-direction: column;
+        background-color: var(--color1);
+        border-radius: 1vh;
+        box-shadow: 0 2px 2px var(--shadow);
+        position: absolute;
+        top: 6.2vh;
+        z-index: 1;
+        max-height: 225px;
+        width: 23vw;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .card {
+        width: 90%;
+        padding: 1vw;
+        color: var(--color2);
+        z-index: 1;
+        font-size: 0.7em;
+        margin-bottom: 0.5vh;
+    }
+    .card-container h3 {
+        color: var(--color2);
+        text-decoration: none;
+        font-size: 1.2em;
+        text-align: left;
+    }
+    .card-container p {
+        overflow-wrap: break-word
+    }
+    /*scrollbar do card*/
+        .card-container::-webkit-scrollbar {
+            width: 6px;
+        }
+        .card-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .card-container::-webkit-scrollbar-thumb {
+            background: #b0b2ba;
+            border-radius: 10px;
+        }
+    /*end*/
+    #search {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    }
+    /* ----searchbar end---- */
 #login {
     background-image: linear-gradient(to bottom, #27b0d4, #2271b2);
     margin: 5px;
@@ -230,44 +240,7 @@ search img {
     top: 10px;
     left: 40px;
 }
-    @media (max-width: 850px) {
-        .banner-pc {
-            max-height: 200px;
-            right: 0px;
-        }
-        .shop-logo {
-            height: 45px;
-        }
-        .banner h1 {
-            font-size: 2em;
-            margin-top: -10px;
-        }
-    }
-    @media (max-width: 480px) {
-        .logo-menu {
-            left: 1vw;
-        }
-        .banner {
-            height: 15vh;
-        }
-        .banner-pc {
-            max-height: 100px;
-        }
-        .shop-logo {
-            width: auto;
-            max-height: 30px;
-            left: 2vh;
-        }
-        .banner h1 {
-            font-size: 1em;
-            left: 2vh;
-        }
-        .banner h2 {
-            height: 10px;
-            font-size: 1em;
-            left: 2vh;
-        }
-    }
+
 /*-------------------BANNER-END-----------------------*/
 main {
     background-image: linear-gradient(to bottom, #c9cdd6, #b2b0bd);
@@ -330,6 +303,9 @@ form {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+.currentProduct h3 {
+    text-decoration: none;
 }
 .actions {
     display: flex;
@@ -423,7 +399,7 @@ footer>h3{
     text-decoration: none;
 }
 /*media aplica propriedades a tamanhos de tela especificos*/
-    @media (max-width:700px) {
+    @media (max-width:1000px) {
         .ad {
             height: 20vh;
         }
@@ -443,6 +419,7 @@ footer>h3{
         }
         .actions {
             flex-direction: column;
+            align-items: center;
             margin: 0 0 1em 0;
         }
         .actions p {
@@ -465,6 +442,7 @@ footer>h3{
             font-size: 1em;
         }
     }
+
     @media (min-width: 700px) {
         .ad {
             height: 35vh;
@@ -476,8 +454,65 @@ footer>h3{
             font-size: 2.5em;
         }
     }
+
+    @media (max-width: 850px) {
+        .banner-pc {
+            max-height: 200px;
+            right: 0px;
+        }
+        .shop-logo {
+            height: 45px;
+        }
+        .banner h1 {
+            font-size: 2em;
+            margin-top: -10px;
+        }
+    }
+
     @media (min-width: 1000px) {
         .ad img {
             max-width: 30%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .logo-menu {
+            left: 1vw;
+        }
+        .banner {
+            height: 15vh;
+        }
+        .banner-pc {
+            max-height: 100px;
+        }
+        .shop-logo {
+            width: auto;
+            max-height: 30px;
+            left: 2vh;
+        }
+        .banner h1 {
+            font-size: 1em;
+            left: 2vh;
+        }
+        .banner h2 {
+            height: 10px;
+            font-size: 1em;
+            left: 2vh;
+        }
+        ul a {
+            font-size: 80%;
+            margin: 0px;
+        }
+        #searchInput {
+            font-size: x-small;
+        }
+        .card {
+            width: 28vw;
+        }
+    }
+
+    @media (min-width: 550px) {
+        .logo-menu {
+            position: absolute;
         }
     }
